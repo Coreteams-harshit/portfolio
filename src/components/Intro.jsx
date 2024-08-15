@@ -1,10 +1,11 @@
 import React from 'react'
+import WhoAmI from './Update/WhoAmI'
 
 const Intro = () => {
   return (
 <>
       <div class="intro" style={{color: "#ffff"}}>
-        <h2 style={{color: "#BCFD4C"}}>About Me</h2>
+        {/* <h2 style={{color: "#BCFD4C"}}>About Me</h2>
         <p style={{ fontWeight: "600", fontSize: "1.4em",color: "#F4DB7D" }} >Hi!,My Name IS Harshit Dixit.I am Currently Staying In Kota,Rajasthan.I Am Currently Parsuing In
           Engineering College of Bikaner(ECB),Bikaner. specialization in Computer Science Engineering(CSE) And
           A
@@ -46,7 +47,8 @@ const Intro = () => {
 
 
 
-                              </div>
+                              </div> */}
+                              <WhoAmI/>
                             </div>
 
                           </>

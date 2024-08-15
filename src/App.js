@@ -8,11 +8,24 @@ import Intro from "./components/Intro";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Navbar from './components/Navbar';
+import CustomCursor from './components/CustomCursor';
+import GlobalStyle from './GlobalStyle';
+import ErrorBoundary from './components/ErrorBoundary';
+import ParticleAnimation from './components/ParticleAnimation';
+import MobileNavbar from './components/MobileNavbar';
+
 function App() {
 
   return (
   <>
-  <Navbar/>
+    {/* <ErrorBoundary>
+ <GlobalStyle />
+ <CustomCursor /> */}
+
+
+  {/* <Navbar/> */}
+  <MobileNavbar/>
+  <ParticleAnimation />
     <Routes >
         <Route exact path="/" element={<Home />} />
         <Route exact path="/blog" element={<Blog />} />
@@ -21,6 +34,8 @@ function App() {
         <Route exact path="/project" element={<Project />} />
  
       </Routes>
+      {/* </ErrorBoundary> */}
+     
   </>
   );
 }

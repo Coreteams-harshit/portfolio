@@ -1,17 +1,45 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+// import './Navbar.css'; // Import the CSS file
 
 const Navbar = () => {
   return (
     <>
-      <div className="container-fluid nav_bg">
-        <div className="row">
-          <div className=" mx-auto">
-            <nav className="navbar navbar-expand-lg navbar-dark " >
-            {/* class="navbar  border-bottom border-body" data-bs-theme="dark" */}
-              <div className="container-fluid">
-                <NavLink className="navbar-brand" to="/">
-               Harshit Dixit Portfolio
+      <div
+        className="container-fluid"
+        style={{ paddingRight: "0rem", paddingLeft: "0.1rem" }}
+      >
+        <div
+          className="row"
+          style={{ marginRight: "0rem", marginLeft: "0rem" }}
+        >
+          <div className="mx-auto">
+            <nav className="navigationset = navbar-expand-lg">
+              <div
+                className="container-fluid ssont"
+                style={{
+                  display: "flex !important",
+                  flexWrap: "inherit !important",
+                  alignItems: " center !important",
+                  justifyContent: "space-between !important",
+                }}
+              >
+                <NavLink className="logo navbar-brand" to="/">
+                  {/* Harshit Dixit Portfolio */}
+                  {/* <span className="logoName">h</span> */}
+                  <span className="logoName">H</span>
+                  <span className="logoName">a</span>
+                  <span className="logoName">r</span>
+                  <span className="logoName">s</span>
+                  <span className="logoName">h</span>
+                  <span className="logoName">i</span>
+                  <span className="logoName">t </span>
+                  <span className="logoName"> </span>
+                  <span className="logoName">D</span>
+                  <span className="logoName">i</span>
+                  <span className="logoName">x</span>
+                  <span className="logoName">i</span>
+                  <span className="logoName">t</span>
                 </NavLink>
                 <button
                   className="navbar-toggler"
@@ -22,7 +50,7 @@ const Navbar = () => {
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
-                  <span className="navbar-toggler-icon" ></span>
+                  <span className="navbar-toggler-icon"></span>
                 </button>
                 <div
                   className="collapse navbar-collapse"
@@ -33,27 +61,26 @@ const Navbar = () => {
                       <NavLink
                         to="/"
                         className={({ isActive }) =>
-                          isActive ? "menu-active" : ""
+                          isActive ? "menu-active nav-link" : "nav-link"
                         }
                       >
                         Home
-                      </NavLink>{" "}
+                      </NavLink>
                     </li>
                     <li className="nav-item">
                       <NavLink
                         className={({ isActive }) =>
-                          isActive ? "menu-active" : ""
+                          isActive ? "menu-active nav-link" : "nav-link"
                         }
                         to="/intro"
                       >
                         Intro
                       </NavLink>
                     </li>
-
                     <li className="nav-item">
                       <NavLink
                         className={({ isActive }) =>
-                          isActive ? "menu-active" : ""
+                          isActive ? "menu-active nav-link" : "nav-link"
                         }
                         to="/project"
                       >
@@ -63,7 +90,7 @@ const Navbar = () => {
                     <li className="nav-item">
                       <NavLink
                         className={({ isActive }) =>
-                          isActive ? "menu-active" : ""
+                          isActive ? "menu-active nav-link" : "nav-link"
                         }
                         to="/blog"
                       >
@@ -73,14 +100,13 @@ const Navbar = () => {
                     <li className="nav-item">
                       <NavLink
                         className={({ isActive }) =>
-                          isActive ? "menu-active" : ""
+                          isActive ? "menu-active nav-link" : "nav-link"
                         }
                         to="/contact"
                       >
                         Contact
                       </NavLink>
                     </li>
-                
                   </ul>
                 </div>
               </div>
