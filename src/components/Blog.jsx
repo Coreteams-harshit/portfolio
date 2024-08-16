@@ -5,9 +5,10 @@ import AI from "../components/img/BlogImage/AI.webp";
 import HTMLCSSImage from "../components/img/BlogImage/HTMLCSSImage.webp";
 import IOT from "../components/img/BlogImage/IOT.webp";
 import LOGO from "../components/img/BlogImage/Logo.png";
-import { Grid, SimpleGrid } from "@chakra-ui/react";
+import { Grid, SimpleGrid, useBreakpointValue } from "@chakra-ui/react";
 
 const Blog = () => {
+  const column =useBreakpointValue({ sm:1, base: 1, md: 1, lg: 2, xl: 2 });
 const Blog = [
   {
     id:1,
@@ -52,7 +53,7 @@ const Blog = [
         <h3 className="mb-4 WOOo">Blog By Harshit Dixit</h3>
       </div>
 
-      <Grid m={1} templateColumns='repeat(2, 1fr)' gap={6} className="blogcontainer">
+      <Grid m={1} templateColumns={`repeat(${column}, 1fr)`} gap={6} className="blogcontainer">
      
       {Blog.map((data)=>(
           <>

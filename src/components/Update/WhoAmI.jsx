@@ -7,6 +7,7 @@ import {
   VStack,
   HStack,
   Flex,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import {
   SiHtml5,
@@ -28,13 +29,14 @@ import {
 } from "react-icons/si";
 
 const WhoAmI = () => {
+  const column =useBreakpointValue({ sm:1, base: 1, md: 2, lg: 2, xl: 2 });
   return (
     // <Box bg="black" color="white" p={10} textAlign="center" sx={{ fontFamily: 'Courier New, Courier, monospace' }}>
-    <Box  color="white" p={10} textAlign="center" sx={{ fontFamily: 'Courier New, Courier, monospace' }}>
-      <Text fontSize="4xl" fontWeight="bold" textTransform="uppercase" mb={5}>
+    <Box  color="white"  p={{ base: 6, md: 8, lg: 10 }} textAlign="center" sx={{ fontFamily: 'Courier New, Courier, monospace' }}>
+      <Text fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }} fontWeight="bold" textTransform="uppercase" mb={5}>
         Who Am I
       </Text>
-      <Text fontSize="lg" mb={5}>
+      <Text fontSize={{ base: "md", md: "lg", lg: "xl" }} mb={5}>
         I am a motivated and versatile individual, always eager to take on{" "}
         <Text as="span" color="green.300">
           new challenges
@@ -46,7 +48,7 @@ const WhoAmI = () => {
         . With a positive attitude and a growth mindset, I am ready to make a
         meaningful contribution and achieve great things.
       </Text>
-      <Text fontSize="lg" mb={10}>
+      <Text fontSize={{ base: "md", md: "lg", lg: "xl" }} mb={10}>
         I have been recognized as one of the{" "}
         <Text as="span" color="green.300">
           Top 100 Coders
@@ -59,18 +61,18 @@ const WhoAmI = () => {
 
       <Flex justify="center" mb={10}>
         <Box mx={5} textAlign="center">
-          <Text fontSize="4xl" color="green.300">
+          <Text  fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }} color="green.300">
             01+
           </Text>
-          <Text fontSize="sm" textTransform="uppercase">
+          <Text fontSize={{ base: "xs", md: "sm", lg: "md" }} textTransform="uppercase">
             Years of <br /> Experience
           </Text>
         </Box>
         <Box mx={5} textAlign="center">
-          <Text fontSize="4xl" color="green.300">
+          <Text fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}  color="green.300">
             20+
           </Text>
-          <Text fontSize="sm" textTransform="uppercase">
+          <Text fontSize={{ base: "xs", md: "sm", lg: "md" }} textTransform="uppercase">
             Completed <br /> Works
           </Text>
         </Box>
@@ -81,7 +83,7 @@ const WhoAmI = () => {
       </Text>
 
       <Box mt={2}>
-        <Grid  templateColumns="repeat(2, 1fr)"  gap={6}>
+        <Grid  templateColumns={`repeat(${column}, 1fr)`}  gap={6}>
           <GridItem>
             <Text fontSize="xl" color="green.300">
               Front End
@@ -139,11 +141,11 @@ const WhoAmI = () => {
         </Grid>
         <Grid templateColumns="repeat(1, 1fr)" gap={6} mt={6}>
           <GridItem>
-            <Text fontSize="xl" color="green.300">
+            <Text fontSize={{ base: "lg", md: "xl", lg: "2xl" }} color="green.300">
               Others
             </Text>
-            <VStack>
-              <HStack>
+            <VStack spacing={4}>
+              <HStack justify="center" spacing={4}>
                 <VStack>
                   <SiGit size="40px" />
                   <Text mt={2}>GIT</Text>
@@ -160,7 +162,9 @@ const WhoAmI = () => {
                   <SiPostman size="40px" />
                   <Text mt={2}>POSTMAN</Text>
                 </VStack>
-                <VStack>
+              </HStack>
+              <HStack justify="center" spacing={4}>
+              <VStack>
                   <SiNetlify size="40px" />
                   <Text mt={2}>NETLIFY</Text>
                 </VStack>
@@ -179,14 +183,14 @@ const WhoAmI = () => {
       </Box>
 
       <Flex justify="center" className="cont" mt={10} mb={10}>
-        <Grid templateColumns="repeat(2, 1fr)" gap={6} w="full">
+        <Grid templateColumns={`repeat(${column}, 1fr)`} gap={6} w="full">
           <GridItem>
-            <Text fontSize="2rem" fontWeight="bold" color={'#f2f2f1'} textTransform="uppercase" mb={5}>
+            <Text fontSize={{ base: "xl", md: "2xl", lg: "3xl" }} fontWeight="bold" color={'#f2f2f1'} textTransform="uppercase" mb={5}>
               Experience
             </Text>
-            <VStack align="start" spacing={4}>
+            <VStack align={{sm:"center" ,base : 'center', md:'start' ,xl :'start'}} spacing={4}>
               <Box width={'85%'}>
-                <Text fontSize="xl" fontWeight="bold" display={'flex'}>
+                <Text fontSize={{ base: "lg", md: "xl", lg: "2xl" }} fontWeight="bold" display={'flex'}>
                   Back End Developer <Text as="span" color="#74ce00" ml={2}>[GTech μLearn]</Text>
                 </Text>
                 <Text display={'flex'} color={'#51554e'}>December 2023 - March 2024</Text>
@@ -195,7 +199,7 @@ const WhoAmI = () => {
                 </Text>
               </Box>
               <Box width={'85%'}>
-                <Text fontSize="xl" fontWeight="bold" display={'flex'}>
+                <Text fontSize={{ base: "lg", md: "xl", lg: "2xl" }} fontWeight="bold" display={'flex'}>
                   Back End Developer <Text as="span" color="#74ce00" ml={2}>[GTech μLearn]</Text>
                 </Text>
                 <Text display={'flex'} color={'#51554e'}>December 2023 - March 2024</Text>
@@ -207,12 +211,12 @@ const WhoAmI = () => {
             </VStack>
           </GridItem>
           <GridItem>
-            <Text fontSize="2rem" fontWeight="bold" textTransform="uppercase" mb={5}>
+            <Text fontSize={{ base: "xl", md: "2xl", lg: "3xl" }} fontWeight="bold" textTransform="uppercase" mb={5}>
               Education
             </Text>
-            <VStack align="start" spacing={4}>
+            <VStack align={{sm:"center" ,base : 'center', md:'start' ,xl :'start'}} spacing={4}>
               <Box  width={'85%'}>
-                <Text fontSize="xl" fontWeight="bold" display={'flex'}>
+                <Text fontSize={{ base: "lg", md: "xl", lg: "2xl" }}  fontWeight="bold" display={'flex'}>
                   Christ College of Engineering <Text as="span" color="#74ce00" ml={2}>[BTech.]</Text>
                 </Text>
                 <Text  display={'flex'} color={'#51554e'}>August 2020 - August 2024</Text>
@@ -221,7 +225,7 @@ const WhoAmI = () => {
                 </Text>
               </Box>
               <Box>
-                <Text fontSize="xl" fontWeight="bold" display={'flex'}>
+                <Text fontSize={{ base: "lg", md: "xl", lg: "2xl" }}  fontWeight="bold" display={'flex'}>
                   Airport Senior Secondary School <Text as="span" color="#74ce00" ml={2}>[CS]</Text>
                 </Text>
                 <Text  display={'flex'} color={'#51554e'}>April 2017 - March 2019</Text>

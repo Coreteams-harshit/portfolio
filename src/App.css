@@ -430,7 +430,7 @@ flex-direction: row;
   }
 
 
-  @media (min-width: 640px) {
+  /* @media (min-width: 640px) { */
     flex-direction: row;
     max-width: 700px;
     .meta {
@@ -465,7 +465,7 @@ flex-direction: row;
       }
     }
   }
-}
+/* } */
 
 
 /* this is the Project Card Image Css add this place  */
@@ -901,4 +901,19 @@ footer span {
 
 .nav-link:focus, .nav-link:hover {
   color: rgb(255, 219, 46) !important;
+}
+
+@media screen and (min-width: 550px) {
+.MobileNav{
+  display: none;
+}
+}
+@media screen and (max-width: 550px) {
+.pcNav{
+  display: none;
+}
+}
+
+.navproblemresolve{
+  flex-direction: row !important;
 }

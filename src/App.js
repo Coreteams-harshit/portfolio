@@ -18,12 +18,12 @@ function App() {
 
   return (
   <>
-    {/* <ErrorBoundary>
+    <ErrorBoundary>
  <GlobalStyle />
- <CustomCursor /> */}
+ <CustomCursor />
 
 
-  {/* <Navbar/> */}
+  <Navbar/>
   <MobileNavbar/>
   <ParticleAnimation />
     <Routes >
@@ -34,7 +34,7 @@ function App() {
         <Route exact path="/project" element={<Project />} />
  
       </Routes>
-      {/* </ErrorBoundary> */}
+      </ErrorBoundary>
      
   </>
   );

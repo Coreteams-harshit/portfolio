@@ -34,12 +34,12 @@ const MobileNavbar = () => {
     {
       id: "3",
       item: "project",
-      url: "/blog",
+      url: "/project",
     },
     {
       id: "4",
       item: "Blog",
-      url: "/project",
+      url: "/blog",
     },
     {
       id: "5",
@@ -49,7 +49,7 @@ const MobileNavbar = () => {
   ];
 
   return (
-    <Box pos="relative">
+    <Box pos="relative" className="MobileNav">
       {/* Your Content */}
       {/* Mobile Navbar */}
       <HStack m={3}>

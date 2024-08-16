@@ -1,4 +1,4 @@
-import { Grid } from "@chakra-ui/react";
+import { Grid, useBreakpointValue } from "@chakra-ui/react";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import krisCent from "../components/project/image/image.png"
@@ -19,6 +19,7 @@ import ecommerce from "../components/project/image/ecommerce.png"
 import dice from "../components/project/image/dice.png"
 
 const Project = () => {
+  const column =useBreakpointValue({ sm:2, base: 1, md: 2, lg: 3, xl: 4 });
   const projects = [
     {
       id: 1,
@@ -197,7 +198,7 @@ const Project = () => {
       {/* THis is the new card for the Project */}
       <Grid
         m={1}
-        templateColumns="repeat(4, 1fr)"
+        templateColumns={`repeat(${column}, 1fr)`}
         gap={3}
         className="blogcontainer"
       >

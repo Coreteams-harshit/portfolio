@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className="container-fluid"
+        className="container-fluid pcNav"
         style={{ paddingRight: "0rem", paddingLeft: "0.1rem" }}
       >
         <div
@@ -56,7 +56,7 @@ const Navbar = () => {
                   className="collapse navbar-collapse"
                   id="navbarSupportedContent"
                 >
-                  <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <ul className="navbar-nav navproblemresolve ms-auto mb-2 mb-lg-0">
                     <li className="nav-item">
                       <NavLink
                         to="/"
