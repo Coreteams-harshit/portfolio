@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import goldenHand from "./img/cursor-yellow.png";
-import pointerHand from "./img/pointer-yellow.png"; // Ensure this path is correct
+import pointerHand from "./img/pointer-yellow.png";
 
 const Cursor = styled.div`
   width: 32px;
@@ -13,16 +13,26 @@ const Cursor = styled.div`
   z-index: 9999;
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease, background-image 0.1s ease;
+  display: ${(props) => (props.isMobile ? "none" : "block")};
 `;
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
   const [cursorImage, setCursorImage] = useState(goldenHand);
 
+  const isMobile = window.innerWidth <= 768;
+
   useEffect(() => {
+    if (isMobile) return;
+
+    // Reset cursor to goldenHand whenever component mounts
+    setCursorImage(goldenHand);
+
     const onMouseMove = (event) => {
-      cursorRef.current.style.left = `${event.pageX}px`;
-      cursorRef.current.style.top = `${event.pageY}px`;
+      if (cursorRef.current) {
+        cursorRef.current.style.left = `${event.pageX}px`;
+        cursorRef.current.style.top = `${event.pageY}px`;
+      }
     };
 
     const onMouseEnterNavItem = () => {
@@ -35,7 +45,9 @@ const CustomCursor = () => {
 
     window.addEventListener("mousemove", onMouseMove);
 
-    const navItems = document.querySelectorAll(".nav-item");
+    const navItems = document.querySelectorAll(
+      ".nav-item, .btn-get-started, .card-back, .read-more1, .read-more, .grid-2, .test, .btn-grid , .FindWithMe"
+    );
     navItems.forEach((item) => {
       item.addEventListener("mouseenter", onMouseEnterNavItem);
       item.addEventListener("mouseleave", onMouseLeaveNavItem);
@@ -48,9 +60,9 @@ const CustomCursor = () => {
         item.removeEventListener("mouseleave", onMouseLeaveNavItem);
       });
     };
-  }, []);
+  }, [isMobile,]);
 
-  return <Cursor ref={cursorRef} image={cursorImage} />;
+  return <Cursor ref={cursorRef} image={cursorImage} isMobile={isMobile} />;
 };
 
-export default CustomCursor;
+export default React.memo(CustomCursor);

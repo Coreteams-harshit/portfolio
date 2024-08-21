@@ -189,8 +189,8 @@ const Project = () => {
   return (
     <>
       <div className="heading-section mb-3 text-center  ">
-        <span className="subheading ">Project</span>
-        <h3 className="mb-4 WOO">Harshit Dixit Portfolio</h3>
+        <span className="subheading mb-8 WOO ">Project</span>
+        <h3 className="mb-4 WOO"></h3>
       </div>
 
    

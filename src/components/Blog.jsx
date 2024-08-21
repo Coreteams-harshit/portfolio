@@ -87,6 +87,7 @@ const Blog = [
           <p class="read-more">
             <Link
               to={data.live_link}
+              class="read-more1"
             >
               Read More
             </Link>

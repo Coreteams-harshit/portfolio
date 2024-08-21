@@ -1,7 +1,7 @@
 // SocialMediaButtons.js
 import React from 'react';
 import { Box, Flex, IconButton, Link, Text } from '@chakra-ui/react';
-import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const SocialMediaButtons = () => {
   return (
@@ -11,7 +11,7 @@ const SocialMediaButtons = () => {
           Find with me
         </Text>
         <Flex>
-          <Link className='FindWithMe' href="#" isExternal>
+          {/* <Link className='FindWithMe' href="#" isExternal>
             <IconButton
               aria-label="Facebook"
               icon={<FaFacebook />}
@@ -25,11 +25,11 @@ const SocialMediaButtons = () => {
                 bg:'gray'
               }}
             />
-          </Link>
-          <Link className='FindWithMe' href="https://twitter.com/?lang=en" isExternal>
+          </Link> */}
+          <Link className='FindWithMe' href="https://github.com/harshitdixit9680" isExternal>
             <IconButton
               aria-label="Twitter"
-              icon={<FaTwitter />}
+              icon={<FaGithub />}
               variant="outline"
               isRound
               m={1}
@@ -41,7 +41,7 @@ const SocialMediaButtons = () => {
               }}
             />
           </Link>
-          <Link className='FindWithMe' href="http://linkedin.com/" isExternal>
+          <Link className='FindWithMe' href="https://www.linkedin.com/in/harshit-dixit-65a4461b1/" isExternal>
             <IconButton
               aria-label="LinkedIn"
               icon={<FaLinkedin />}

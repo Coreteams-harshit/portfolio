@@ -84,14 +84,14 @@ const MobileNavbar = () => {
             pos="relative"
             w="28px"
             h="4px"
-            bg="purple.600"
+            bg="#ffdb2e"
             transform="skew(5deg)"
             transition="all .275s"
             _before={{
               content: `''`,
               display: "block",
               height: "100%",
-              bg: "purple.600",
+              bg: "#ffdb2e",
               transition: "all .275s",
               transform: isOpen
                 ? "translateY(0px) skew(-10deg) rotate(75deg)"
@@ -101,7 +101,7 @@ const MobileNavbar = () => {
               content: `''`,
               display: "block",
               height: "100%",
-              bg: "purple.600",
+              bg: "#ffdb2e",
               transition: "all .275s",
               transform: isOpen
                 ? "translateY(-12px) translateX(10px) skew(-20deg)"
@@ -117,7 +117,7 @@ const MobileNavbar = () => {
             textTransform="uppercase"
             fontWeight="500"
             textAlign="center"
-            color="purple.600"
+            color="#ffdb2e"
           >
             {/* Menu */}
           </Text>
@@ -145,7 +145,7 @@ const MobileNavbar = () => {
           bottom: 0,
           left: 0,
           right: "-15px",
-          bg: "yellow.300",
+          bg: "#f6e05e8f",
           transformOrigin: "0 0",
           transform: isOpen
             ? "skew(-14deg) translateX(0)"
@@ -170,7 +170,7 @@ const MobileNavbar = () => {
                 style={{
                   display: "block",
                   padding: "12px 0",
-                  color: "purple",
+                  color: "#ffdb2e",
                   fontSize: "1.4em",
                   fontWeight: "bold",
                   opacity: isOpen ? 1 : 0,

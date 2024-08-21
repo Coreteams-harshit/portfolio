@@ -20,7 +20,7 @@ function App() {
   <>
     <ErrorBoundary>
  <GlobalStyle />
- <CustomCursor />
+ 
 
 
   <Navbar/>
